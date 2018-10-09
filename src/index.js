@@ -1,20 +1,23 @@
 import React from "react";
 import { render } from "react-dom";
 
-class Human extends React.Component{
-  constructor(props){
-   super(props);
-   this.state={name:"unko"};
+class Human extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { name: "unko", age: 1 };
   }
-  render(){
-    return(
+  //render()は必須
+  render() {
+    return (
       <h2 onClick={this.onButtonClick}>
-      {this.state.name}{this.props.age}</h2>
+        {this.state.name}
+        {this.state.age}
+      </h2>
     );
   }
-  onButtonClick(){
-    alert("click")
-  }
+  onButtonClick = () => {
+    this.setState({ age: this.state.age + 1 });
+  };
 }
 
-render(<Human age="30" />,document.getElementById("root"))
+render(<Human />, document.getElementById("root"));

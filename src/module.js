@@ -1,5 +1,3 @@
-import React from "react";
-
 // class クラスネームで class を作成する
 class Human {
   // constructor はクラスからインスタンスを作成した時に実行される
@@ -18,5 +16,7 @@ class Human {
 }
 
 const Nakanishi = new Human("Nakanishi", 17);
-
-callMyProfile();
+//console.log(Nakanishi);
+const Tanaka = new Human("Tanaka", 17);
+//console.log(Tanaka);
+Nakanishi.callMyProfile();
